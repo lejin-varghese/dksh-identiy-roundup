@@ -1,14 +1,16 @@
-@import url(c:\wamp64\www\dksh-identity-sustainability\identity\ui\css\icons.css);
+@import url(c:\wamp64\www\dksh-identity-roundup\identity\ui\css\icons.css);
 @import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
 @import url("../css/fonts.css");
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   padding-left: 24px;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   margin: 0;
   padding: 0;
 }
@@ -88,6 +90,23 @@ a:hover {
   .navbar-nav.mr-auto.navigator .nav-item .home svg {
     display: none;
   }
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 30px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
 }
 
 html, body {
