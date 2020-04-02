@@ -19,10 +19,6 @@
   <link rel="stylesheet" href="identity/ui/css/icons.css">
   <link rel="stylesheet" type="text/css" href="ui/css/videopopup.css" media="screen" />
   <link rel="stylesheet" href="identity/ui/css/aos.css" />
-  <!-- Style of the component -->
-  <link rel="stylesheet" href="identity/ui/css/vertical-slide-accordion.css" />
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -372,83 +368,118 @@
     </div>
   </div>
 
-  <div class="section round-up page-section">
-    <div id="va-accordion" class="va-container" style="margin-top:0px;">
-      <div class="va-nav">
-        <span class="va-nav-prev" style="top:10px;">Previous</span>
-        <span class="va-nav-next" style="bottom:10px;">Next</span>
+  <!-- Activity of the week -->
+  <div class="section page-section activity-section" id="section-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 img enteprenuer"></div>
+        <div class="col-12 col-lg-6 right">
+          <div class="txt-wrap ">
+            <h3 class="dksh-title-5">Activity of the week</h3>
+            <h3 class="dksh-title-3">How do you make DKSH a more sustainable company?</h3>
+            <h5 class="dksh-title-4">Tell us and win a cool prize!</h5>
+            <a target="_blank" href="https://www.surveymonkey.de/r/W5RB2HQ" class="btn btn-primary">Start here</a>
+            <p><i>Submit your answer by Friday, April 3, 12 p.m. CET.</i></p>
+            <p>See last week’s winners <a class="navigator" href="#section-5">here.</a></p>
+          </div>
+        </div>
       </div>
-      <div class="va-wrapper">
-        <div class="va-slice purpose-bg">
-          <div class="container">
-            <h3 class="va-title">Our purpose</h3>
-            <div class="va-content">
-              <p>Henry Watson</p>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
+    </div>
+  </div>
+  <!-- video Testimonials -->
+  <div class="testi-video section page-section" id="section-4">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-12 col-lg-6 d-flex testy-left order-xl-2 order-lg-1">
+          <div class="txt-wrap">
+            <h3 class="dksh-title-3 white">"Sustainability, to me, means..."</h3>
+            <h5 class="dksh-title-4 white">Hear what some of your colleagues are saying!</h5>
           </div>
         </div>
-        <div class="va-slice vision-bg">
-          <div class="container">
-
-            <h3 class="va-title">Our vision</h3>
-            <div class="va-content">
-              <p>Keith Johnson</p>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="va-slice strategy-bg">
-          <div class="container">
-            <h3 class="va-title">Our strategy</h3>
-            <div class="va-content">
-              <p>Andrew Alaniz</p>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="va-slice values-bg">
-          <div class="container">
-            <h3 class="va-title">Our values</h3>
-            <div class="va-content">
-              <p>Ben Freeman</p>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="va-slice promise-bg">
-          <div class="container">
-            <h3 class="va-title">Our promise</h3>
-            <div class="va-content">
-              <p>Alex Schuman</p>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+        <div class="col-12 col-lg-6 testi-v-w order-xl-1 order-lg-2">
+          <div class="v-slider-wrap">
+            <div class="testi-v" id="testi-v">
+              <carousel-3d :autoplay="false" :display="3" :height="640" :controls-visible="true" :controls-prev-html="'&#10092;'" :controls-next-html="'&#10093;'" :controls-width="30" :controls-height="60" @after-slide-change="onAfterSlideChange" @before-slide-change="onBeforeSlideChange"
+                @last-slide="onLastSlide">
+                <slide :index="0">
+                  <video controls poster="identity/ui/video/sustainability/kristie-wong.jpg" id="testi-vd0">
+                    <source src="identity/ui/video/sustainability/kristie-wong.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Kristie Wong
+                  </div>
+                </slide>
+                <slide :index="1">
+                  <video controls poster="identity/ui/video/sustainability/pauline-yu.jpg" id="testi-vd1">
+                    <source src="identity/ui/video/sustainability/pauline-yu.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Pauline Yu
+                  </div>
+                </slide>
+                <slide :index="2">
+                  <video controls poster="identity/ui/video/sustainability/chawakorn-thammason.jpg" id="testi-vd2">
+                    <source src="identity/ui/video/sustainability/chawakorn-thammason.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Chawakorn Thammason
+                  </div>
+                </slide>
+                <slide :index="3">
+                  <video controls poster="identity/ui/video/sustainability/safety-khanisorn.jpg" id="testi-vd3">
+                    <source src="identity/ui/video/sustainability/safety-khanisorn.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Khanisorn Thongchiew
+                  </div>
+                </slide>
+                <slide :index="4">
+                  <video controls poster="identity/ui/video/sustainability/tw-robin.jpg" id="testi-vd4">
+                    <source src="identity/ui/video/sustainability/tw-robin.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Robin Feng
+                  </div>
+                </slide>
+                <slide :index="5">
+                  <video controls poster="identity/ui/video/sustainability/bernadette-lim-wei-see.jpg" id="testi-vd5">
+                    <source src="identity/ui/video/sustainability/bernadette-lim-wei-see.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Bernadette Lim
+                  </div>
+                </slide>
+                <slide :index="6">
+                  <video controls poster="identity/ui/video/sustainability/chawakorn-thammason.jpg" id="testi-vd6">
+                    <source src="identity/ui/video/sustainability/chawakorn-thammason.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Chawakorn Thammason
+                  </div>
+                </slide>
+                <slide :index="7">
+                  <video controls poster="identity/ui/video/sustainability/ernest-bc-khoo.jpg" id="testi-vd7">
+                    <source src="identity/ui/video/sustainability/ernest-bc-khoo.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Ernest Khoo
+                  </div>
+                </slide>
+                <slide :index="8">
+                  <video controls poster="identity/ui/video/sustainability/nicolette-wong.jpg" id="testi-vd8">
+                    <source src="identity/ui/video/sustainability/nicolette-wong.mp4" type="video/mp4">
+                  </video>
+                  <div class="label">
+                    Nicolette Wong
+                  </div>
+                </slide>
+              </carousel-3d>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- winners -->
   <div class="section page-section winners entp-winner-g" id="section-5">
     <!-- section 1 -->
@@ -837,13 +868,9 @@
   <script src="identity/ui/js/jquery.anchorScroll.min.js"></script>
   <script src="identity/ui/js/main.js"></script>
   <script src="identity/ui/js/aos.js"></script>
-
-  <!-- accoridon -->
-  <script type="text/javascript" src="identity/ui/js/jquery.mousewheel.js"></script>
-  <script type="text/javascript" src="identity/ui/js/jquery.vaccordion.js"></script>
-  <script type="text/javascript" src="identity/ui/js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript">
-  </script>
+  <!-- video 3d gallery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js"></script>
+  <script src="https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js"></script>
   <script>
     AOS.init({
       easing: 'ease-in-out-sine'
@@ -865,18 +892,28 @@
       }
     });
 
+    new Vue({
 
-    // accordion
-    $(function() {
-      $('#va-accordion').vaccordion({
-        accordionW: $(window).width(),
-        accordionH: $(window).height(),
-        visibleSlices: 5,
-        expandedHeight: 450,
-        animOpacity: 0.1,
-        contentAnimSpeed: 100
-      });
-    });
+      el: '#testi-v',
+      data: {
+        slides: 9
+      },
+      components: {
+        'carousel-3d': Carousel3d.Carousel3d,
+        'slide': Carousel3d.Slide
+      },
+      methods: {
+        onAfterSlideChange(index) {
+          //$('#testi-vd0').play();
+          for (var i = 0; i <= 8; i++) {
+            document.getElementById("testi-vd" + i).pause();
+          }
+          document.getElementById("testi-vd" + index).play();
+          //e.preventDefault(); 
+          console.log('@onAfterSlideChange Callback Triggered', 'Slide Index ' + index)
+        }
+      }
+    })
   </script>
 </body>
 

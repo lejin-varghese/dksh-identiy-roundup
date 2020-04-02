@@ -1588,6 +1588,229 @@ footer {
   }
 }
 
+.our-value-r {
+  $anim-speed: 0.3s;
+  .row {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    .col {
+      height: 100%;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      &:before {
+        content: '';
+        background: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transition-property: top, opacity;
+        transition-duration: $anim-speed;
+      }
+      .wrap {
+        margin-top: auto;
+        margin-bottom: 0;
+        width: 100%;
+        .cont-wrap {
+          font-size: 16px;
+          padding: 20px;
+          color: #fff;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 3;
+          width: 100%;
+          height: 110px;
+          transition-property: height;
+          &::before {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+            display: block;
+            opacity: 0;
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            top: -142px;
+            width: 100%;
+          }
+          h3 {
+            line-height: 1;
+            font-weight: 600;
+            font-size: 30px;
+            display: block;
+            opacity: 1;
+            position: relative;
+            top: 20px;
+            transition-property: top, opacity, font-size;
+            transition-duration: $anim-speed;
+            transition-delay: 0s;
+          }
+          .title {
+            line-height: 42px;
+            font-weight: 600;
+            font-size: 18px;
+            display: block;
+            opacity: 0;
+            position: relative;
+            top: 200px;
+            transition-property: top, opacity;
+            transition-duration: $anim-speed;
+            transition-delay: 0s;
+            margin-bottom: 20px;
+          }
+          ul {
+            position: relative;
+            opacity: 0;
+            top: 200px;
+            transition-property: top, opacity;
+            transition-duration: $anim-speed;
+            transition-delay: 0s;
+            margin: 0px;
+            padding: 0;
+            li {
+              padding-left: 0;
+              margin-left: 33px;
+              transition-property: margin;
+              transition-duration: $anim-speed;
+              a {
+                color: #fff;
+                text-decoration: none;
+              }
+              &:hover {
+                margin-left: 53px;
+              }
+            }
+          }
+          .btn {
+            opacity: 0;
+            position: relative;
+            top: 200px;
+            transition-property: top, opacity;
+            transition-duration: $anim-speed;
+            transition-delay: 0s;
+          }
+        }
+      }
+      &.purpose {
+        background: url(../images/purpose-2.jpg);
+        background-size: cover;
+        background-position: -250px center;
+      }
+      &.vision {
+        background: url(../images/vision.jpg);
+        background-size: cover;
+        background-position: -250px center;
+      }
+      &.strategy {
+        background: url(../images/strategy.jpg);
+        background-size: cover;
+        background-position: -250px center;
+      }
+      &.values {
+        background: url(../images/values.jpg);
+        background-size: cover;
+        background-position: -598px center;
+      }
+      &.promise {
+        background: url(../images/promise.jpg);
+        background-size: cover;
+        background-position: -598px center;
+      }
+      &:hover {
+        &:before {
+          opacity: 1;
+          top: 100%;
+        }
+        .cont-wrap {
+          height: auto;
+          transition-delay: 0.15s;
+          &::before {
+            opacity: 1;
+          }
+          h3 {
+            top: 0;
+            opacity: 1;
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+            font-size: 20px;
+          }
+          .title {
+            top: 0;
+            opacity: 1;
+            -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+            font-size: 34px;
+            color: #fff;
+          }
+          ul {
+            top: 0;
+            opacity: 1;
+            -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+            font-size: 34px;
+            color: #fff;
+          }
+          .btn {
+            top: 0;
+            opacity: 1;
+            -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.round-up {
+  .va-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 120px;
+    color: #fff;
+    &::after {
+      content: "";
+      display: inline-block;
+      background: rgba(0, 0, 0, .2);
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      top: 0;
+      width: 750px;
+      filter: blur(50px);
+      left: 0;
+    }
+  }
+  .purpose-bg {
+    background: url(../images/purpose-2.jpg) center center;
+    background-size: cover;
+  }
+  .vision-bg {
+    background: url(../images/vision.jpg) center -340px;
+    background-size: cover;
+  }
+  .strategy-bg {
+    background: url(../images/strategy.jpg) center center;
+    background-size: cover;
+  }
+  .values-bg {
+    background: url(../images/values.jpg) center center;
+    background-size: cover;
+  }
+  .values-bg {
+    background: url(../images/values.jpg) center center;
+    background-size: cover;
+  }
+  .promise-bg {
+    background: url(../images/promise.jpg) center center;
+    background-size: cover;
+  }
+}
+
 @-webkit-keyframes sdb05 {
   0% {
     -webkit-transform: translate(0, 0);
