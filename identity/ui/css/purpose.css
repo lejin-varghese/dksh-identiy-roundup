@@ -2339,6 +2339,10 @@ footer ul li a {
   }
 }
 
+.our-value-r {
+  overflow: hidden;
+}
+
 .our-value-r .row {
   margin: 0;
   padding: 0;
