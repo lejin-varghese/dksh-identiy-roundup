@@ -1652,6 +1652,8 @@ footer {
 }
 
 .our-value-r {
+  position: relative;
+  z-index: 101;
   overflow: hidden;
   $anim-speed: 0.3s;
   .row {
@@ -1950,6 +1952,8 @@ footer {
 }
 
 .fav-movements {
+  position: relative;
+  z-index: 101;
   @media (max-width: 960px) {
     padding-top: 25%;
     padding-bottom: 25%;
@@ -1973,6 +1977,8 @@ footer {
 }
 
 .checklist {
+  position: relative;
+  z-index: 101;
   background: #fff;
   padding: 100px 0;
   height: initial;
@@ -2032,6 +2038,8 @@ footer {
 }
 
 .video-wall-section {
+  position: relative;
+  z-index: 101;
   background: $dksh-r;
   display: flex;
   height: 100%;
@@ -2091,6 +2099,8 @@ footer {
 }
 
 .promise-section {
+  position: relative;
+  z-index: 101;
   height: inherit;
   background: url(../images/promise-roundup.jpg);
   background-size: cover;
