@@ -22,6 +22,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bookmark:before {
+  content: "\e90c";
+  color: #535353;
+}
+
+.icon-download1:before {
+  content: "\e90d";
+  color: #535353;
+}
+
+.icon-office:before {
+  content: "\e90e";
+  color: #535353;
+}
+
+.icon-signature:before {
+  content: "\e90f";
+  color: #535353;
+}
+
+.icon-survey:before {
+  content: "\e910";
+  color: #535353;
+}
+
+.icon-values:before {
+  content: "\e911";
+  color: #535353;
+}
+
 .icon-new-2:before {
   content: "\e90b";
 }
