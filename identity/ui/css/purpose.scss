@@ -1961,6 +1961,9 @@ footer {
   background-color: darken($dksh-r, 5);
   border-radius: 0;
   color: #fff;
+  @media (max-width: 960px) {
+    margin-bottom: 0;
+  }
   a {
     display: inline-block;
     vertical-align: middle;
@@ -1977,6 +1980,13 @@ footer {
 
 .video-wall {
   .container {
+    .mob-pg-caller {
+      display: none;
+      @media (max-width: 960px) {
+        display: block;
+        margin-top: 25px;
+      }
+    }
     .filtering {
       display: block;
       margin: 0;
@@ -1984,6 +1994,9 @@ footer {
       margin-bottom: 50px;
       margin-top: 100px;
       cursor: pointer;
+      @media (max-width: 960px) {
+        display: none;
+      }
       li {
         display: inline-block;
         list-style: none;
@@ -2002,6 +2015,9 @@ footer {
   .gallery {
     .grid-item {
       margin-bottom: 25px;
+      @media (max-width: 960px) {
+        padding: 0;
+      }
       .video-wrap {
         border: 10px solid #fff;
         box-shadow: 0 0 20px rgba(0, 0, 0, .3);
@@ -2022,10 +2038,12 @@ footer {
         }
       }
       &:hover {
-        .video-wrap {
-          box-shadow: 0 0 23px rgba(0, 0, 0, .3);
-          transform: scale(1.1);
-          z-index: 5;
+        @media (min-width: 1025px) {
+          .video-wrap {
+            box-shadow: 0 0 23px rgba(0, 0, 0, .3);
+            transform: scale(1.1);
+            z-index: 5;
+          }
         }
       }
     }
