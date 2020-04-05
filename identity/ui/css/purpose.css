@@ -2296,6 +2296,69 @@ footer ul li a {
   }
 }
 
+.winners.sust-winner .row .col.first-head {
+  -ms-flex-preferred-size: 28.5%;
+      flex-basis: 28.5%;
+}
+
+.winners.sust-winner .row .col.first-head .inner .dksh-title-3 {
+  font-size: 2vw;
+}
+
+.winners.sust-winner .row .col.first-head .inner p {
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .winners.sust-winner .row .col.first-head {
+    -ms-flex-preferred-size: 66.5%;
+        flex-basis: 66.5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .winners.sust-winner .row .col.first-head {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .winners.sust-winner .row .col.first-head {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.winners.sust-winner .row .pic.col {
+  -ms-flex-preferred-size: 14.123%;
+      flex-basis: 14.123%;
+}
+
+@media (max-width: 1024px) {
+  .winners.sust-winner .row .pic.col {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .winners.sust-winner .row .pic.col {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+  .winners.sust-winner .row .pic.col .label .quote p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .winners.sust-winner .row .pic.col {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .testi-video {
   position: relative;
   z-index: 101;

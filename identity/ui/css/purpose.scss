@@ -1546,6 +1546,46 @@ footer {
       }
     }
   }
+  &.sust-winner {
+    .row .col.first-head {
+      flex-basis: 28.5%;
+      .inner {
+        .dksh-title-3 {
+          font-size: 2vw;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 1024px) {
+        flex-basis: 66.5%;
+      }
+      @media (max-width: 992px) {
+        flex-basis: 100%;
+      }
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
+    }
+    .row .pic.col {
+      flex-basis: 14.123%;
+      .label .quote p {}
+      @media (max-width: 1024px) {
+        flex-basis: 33.33%;
+        .label .quote p {}
+      }
+      @media (max-width: 992px) {
+        flex-basis: 33.33%;
+        .label .quote p {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+        .label .quote p {}
+      }
+    }
+  }
 }
 
 .testi-video {

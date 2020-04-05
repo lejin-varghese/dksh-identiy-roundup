@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DKSH Identity</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="identity/ui/images/favicon/apple-touch-icon.png/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="identity/ui/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="identity/ui/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="identity/ui/images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="identity/ui/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="ui/images/favicon/apple-touch-icon.png/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ui/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ui/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="ui/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="ui/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="ui/css/purpose.css">
-  <link rel="stylesheet" href="../identity/ui/css/icons.css">
+  <link rel="stylesheet" href="ui/css/icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -45,11 +45,11 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-        <a href="identity/overview" class="navbar-brand ml-auto logo order-lg-last" data-menuanchor="firstPage"><img class="popimg" src="../identity/ui/images/logo_dksh.svg" alt="DKSH"></a>
+        <a href="overview" class="navbar-brand ml-auto logo order-lg-last" data-menuanchor="firstPage"><img class="popimg" src="../ui/images/logo_dksh.svg" alt="DKSH"></a>
         <div class="collapse navbar-collapse order-lg-first" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto navigator">
             <li class="nav-item">
-              <a href="identity/overview" class="nav-link home" data-menuanchor="firstPage">
+              <a href="overview" class="nav-link home" data-menuanchor="firstPage">
                 <svg version="1.1" class="" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                     <g>
                         <g>
@@ -70,13 +70,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="identity/office-templates">Office templates</a>
+              <a class="nav-link " href="office-templates">Office templates</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="identity/downloads">Downloads</a>
+              <a class="nav-link" href="downloads">Downloads</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="identity/faq">FAQ</a>
+              <a class="nav-link" href="faq">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="mailto:GroupMarketing@dksh.com">Contact us</a>
@@ -141,17 +141,6 @@
 						</video>
             <div class="name">
               Amanda Tan
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-2 col-sm-4 grid-item integrity ">
-          <div class="video-wrap">
-
-            <video controls poster="ui/video/integrity/video-3.jpg">
-							<source src="ui/video/integrity/video-3.mp4" type="video/mp4">
-						</video>
-            <div class="name">
-              Robert Koller
             </div>
           </div>
         </div>
@@ -574,19 +563,28 @@
 
   <div class="scrollToTop top"></div>
   <!-- Script for smooth scrolling -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="ui/js/isotope.pkgd.min.js"></script>
   <script>
-    var $gallery = $('.gallery').isotope({});
     $(document).ready(function() {
-      $('.filtering').on('click', 'li', function() {
-        var $filterValue = $(this).attr('data-filter');
-        $gallery.isotope({
-          filter: $filterValue
-        });
-        $(this).addClass('active').siblings().removeClass('active')
+      $('.gallery').isotope(function() {
+        itemSelector: '.grid-item'
+      });
+
+      $('.filtering li').click(function() {
+        $('.filtering li').removeClass('active');
+        $(this).addClass('active');
+        var selector = $(this).attr('data-filter');
+        $('.gallery').isotope({
+          filter: selector,
+          sortBy: 'random',
+          layoutMode: 'fitRows',
+        })
+        return false;
       });
     });
+
+
 
     $('.filtering-drop').on('change', function() {
       // get filter value from option value
