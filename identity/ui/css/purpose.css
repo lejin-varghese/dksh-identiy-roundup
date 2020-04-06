@@ -2362,8 +2362,8 @@ footer ul li a {
 
 @media (max-width: 992px) {
   .winners.sust-winner .row .pic.col {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
   }
   .winners.sust-winner .row .pic.col .label .quote p {
     font-size: 12px;
