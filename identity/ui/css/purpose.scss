@@ -1552,9 +1552,18 @@ footer {
       .inner {
         .dksh-title-3 {
           font-size: 2vw;
+          @media (max-width: 992px) {
+            font-size: 8vw;
+          }
         }
         p {
           font-size: 20px;
+          @media (max-width: 992px) {
+            font-size: 35px;
+          }
+        }
+        @media (max-width: 992px) {
+          padding: 60px 30px;
         }
       }
       @media (max-width: 1024px) {
@@ -1575,7 +1584,7 @@ footer {
         .label .quote p {}
       }
       @media (max-width: 992px) {
-        flex-basis: 33.33%;
+        flex-basis: 50%;
         .label .quote p {
           font-size: 12px;
         }

@@ -2305,8 +2305,26 @@ footer ul li a {
   font-size: 2vw;
 }
 
+@media (max-width: 992px) {
+  .winners.sust-winner .row .col.first-head .inner .dksh-title-3 {
+    font-size: 8vw;
+  }
+}
+
 .winners.sust-winner .row .col.first-head .inner p {
   font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .winners.sust-winner .row .col.first-head .inner p {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .winners.sust-winner .row .col.first-head .inner {
+    padding: 60px 30px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2344,8 +2362,8 @@ footer ul li a {
 
 @media (max-width: 992px) {
   .winners.sust-winner .row .pic.col {
-    -ms-flex-preferred-size: 33.33%;
-        flex-basis: 33.33%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .winners.sust-winner .row .pic.col .label .quote p {
     font-size: 12px;
