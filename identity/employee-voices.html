@@ -121,7 +121,7 @@
 					<option value=".sustainability">Sustainability</option>
         </select>
       </div>
-      <div class="row gallery grid">
+      <div id="gallery-container" class="row gallery grid">
         <div class="col-xl-2 col-sm-4 grid-item integrity">
           <div class="video-wrap">
 
@@ -923,7 +923,7 @@
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="ui/js/isotope.pkgd.min.js"></script>
   <script>
-    $('#container').imagesLoaded(function() {
+    $('#gallery-container').imagesLoaded(function() {
       // images have loaded
       $('.gallery').isotope(function() {
         itemSelector: '.grid-item'
