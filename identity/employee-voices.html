@@ -112,8 +112,8 @@
 
       <div class="mob-pg-caller">
         <p>Filter by category</p>
-        <select class="filtering-drop">
-					<option value="*" selected>All</option>
+        <select id="filtering-drop" class="filtering-drop">
+					<option value="*">All</option>
 					<option value=".integrity">Integrity</option>
 					<option value=".empowerment">Empowerment</option>
 					<option value=".collaboration">Collaboration</option>
@@ -920,9 +920,11 @@
   <div class="scrollToTop top"></div>
   <!-- Script for smooth scrolling -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="ui/js/isotope.pkgd.min.js"></script>
   <script>
-    $(document).ready(function() {
+    $('#container').imagesLoaded(function() {
+      // images have loaded
       $('.gallery').isotope(function() {
         itemSelector: '.grid-item'
       });
@@ -938,19 +940,17 @@
         })
         return false;
       });
-    });
-
-
-
-    $('.filtering-drop').on('change', function() {
-      // get filter value from option value
-      var filterValue = this.value;
-      // use filterFn if matches value
-      filterValue = filterValue[filterValue] || filterValue;
-      $gallery.isotope({
-        filter: filterValue
+      $('#filtering-drop').on('change', function(event) {
+        var filterValue = this.value;
+        console.log(filterValue.value);
+        $('.gallery').isotope({
+          filter: filterValue,
+        })
       });
     });
+
+
+
 
     var figure = $(".grid-item").hover(hoverVideo, hideVideo);
 
